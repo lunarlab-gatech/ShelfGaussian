@@ -193,12 +193,12 @@
   </div>
 </section>
 
-<!-- Contribution section -->
-<section class="section">
+<!-- Methodology section -->
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Contributions</h2>
+        <h2 class="title is-3">Methodology</h2>
         <div class="content has-text-justified">
           <p>
             We propose a multi-modal Gaussian transformer architecture that queries features from different sensor modalities to predict feed-forward 3D Gaussians, 
@@ -219,6 +219,46 @@
     </div>
     <img src="./static/images/method.jpg" alt="ShelfGaussian Method" style="width: 100%; height: auto;">
   </div>
+</section> -->
+
+
+
+
+<!-- Methodology section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Methodology</h2>
+        <div class="content has-text-justified">
+
+          <ul style="list-style-type: disc; padding-left: 1.5em;">
+            <li>
+              We propose a multi-modal Gaussian transformer architecture that queries features from different sensor modalities to predict feed-forward 3D Gaussians, 
+              supporting camera-only, LiDAR-only, LiDAR-camera, camera-radar, and LiDAR-camera-radar sensor input.
+            </li>
+
+            <li>
+              We introduce a novel shelf-supervised learning paradigm to optimize Gaussians using off-the-shelf VFMs at both 2D image and 3D scene levels. 
+              A highly efficient, CUDA-accelerated Gaussian-to-Voxel (G2V) splatting module is designed to enable high-dimensional VFM feature distillation and speed up training.
+            </li>
+
+            <li>
+              ShelfGaussian achieves state-of-the-art zero-shot performance on semantic occupancy prediction on the nuScenes dataset, superior performance on Bird's-Eye-View (BEV) segmentation, and reduced collision rate in trajectory planning when integrated into our Gaussian-Planner.
+            </li>
+
+            <li>
+              We further test ShelfGaussian on an unmanned ground vehicle (UGV) across diverse urban scenes, demonstrating its superior in-the-wild performance. 
+              All code and data will be open-sourced to benefit the community.
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <img src="./static/images/method.jpg" alt="ShelfGaussian Method" style="width: 100%; height: auto;">
+  </div>
 </section>
 
 
@@ -236,7 +276,7 @@
               LiDAR points are then projected to image and decorated with pixel-wise DINO features. 
               These points are aggregated and voxelized at a customized resolution to be 3D pseudo labels.
             </p>
-            <img src="./static/images/pseudo_label_engine.png" alt="pseudo_label_engine" style="width: 100%; height: auto;">
+            <img src="./static/images/pseudo_label_engine.jpg" alt="pseudo_label_engine" style="width: 100%; height: auto;">
           </div>
           </div>
 
@@ -273,7 +313,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Qualitative Results on Occ3D-nuScenes Dataset.</h2>
+        <h2 class="title is-3">Qualitative Results on Occ3D-nuScenes Dataset</h2>
         <div class="content has-text-justified">
           <!-- <p>
             Text here.
@@ -291,7 +331,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Qualitative Results on Custom Dataset.</h2>
+        <h2 class="title is-3">Qualitative Results on Custom Dataset</h2>
         <div class="content has-text-justified">
           <!-- <p>
             Text here.
