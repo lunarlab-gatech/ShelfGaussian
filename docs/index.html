@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Shelf-Supervised Open-Vocabulary Gaussian-based 3D Scene Understanding.">
+  <meta name="keywords" content="ShelfGaussian">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShelfGaussian: Shelf-Supervised Open-Vocabulary Gaussian-based 3D Scene Understanding</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="icon" href="./static/images/lab_icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ShelfGaussian: Shelf-Supervised Open-Vocabulary Gaussian-based 3D Scene Understanding</h1>
+            <!-- <h2 class="subtitle is-4">RSS 2025 Gaussian Representations for Robot Autonomy Workshop</h2> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://junshao0104.github.io/">Lingjun Zhao</a><sup>1*✉</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.yandongluo.com/">Yandong Luo</a><sup>1*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://faculty.cc.gatech.edu/~hays/">James Hays</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ganlumomo.github.io/">Lu Gan</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            <span class="author-block"><sup>✉</sup>Corresponding Author</span>
+            <span class="author-block"><sup>1</sup>Georgia Institute of Technology</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Coming Soon)</span>
+                </a>
+            </span> -->
+            <!-- Arxiv Link. -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv (Coming Soon)</span>
+                </a>
+            </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/demo_compressed.mp4"
+                type="video/mp4">
+      </video>
+      <div style="height: 50px;"></div> Spacer div -->
+
+      <!-- <video id="teaser" autoplay muted loop playsinline 
+       style="display: block; margin: 0 auto; width: 80%; max-width: 800px; height: auto; margin-bottom: 50px;">
+      <source src="./static/videos/new_video_demo.mp4" type="video/mp4">
+      </video> -->
+      <img src="./static/images/teaser.jpg" alt="ShelfGaussian" style="width: auto; height: auto;">
+      <h2 class="subtitle has-text-centered">
+        We propose ShelfGaussian for Gaussian-based 3D scene understanding under open-vocabulary, multi-modal and multi-task scenario. 
+        (a) Our model is able to assist a robot in predicting open-set occupancy from any sensor modalities with the help of VFMs. 
+        (b) Compared to existing Gaussian-based methods, ours provides a generalizable solution for 3D scene understanding.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          We introduce ShelfGaussian, an open-vocabulary multi-modal Gaussian-based 3D scene understanding framework supervised by off-the-shelf vision foundation models (VFMs).
+          Gaussian-based methods have demonstrated superior performance and computational efficiency across a wide range of scene understanding tasks. 
+          However, existing methods either model objects as closed-set semantic Gaussians supervised by annotated 3D labels, neglecting their rendering ability, 
+          or learn open-set Gaussian representations via purely 2D self-supervision, leading to degraded geometry and limited to camera-only settings. 
+          To fully exploit the potential of Gaussians, we propose a Multi-Modal Gaussian Transformer that enables Gaussians to query features from diverse sensor modalities, 
+          and a Shelf-Supervised Learning Paradigm that efficiently optimizes Gaussians with VFM features jointly at 2D image and 3D scene levels. 
+          We evaluate ShelfGaussian on various perception and planning tasks. 
+          Experiments on Occ3D-nuScenes demonstrate its state-of-the-art zero-shot semantic occupancy prediction performance. 
+          ShelfGaussian is further evaluated on an unmanned ground vehicle (UGV) to assess its in-the-wild performance across diverse urban scenarios.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- Contribution section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Contributions</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose a multi-modal Gaussian transformer architecture that queries features from different sensor modalities to predict feed-forward 3D Gaussians, 
+            supporting camera-only, LiDAR-only, LiDAR-camera, camera-radar and LiDAR-camera-radar sensor input.
+          </p>
+          <p>
+            We introduce a novel shelf-supervised learning paradigm to optimize Gaussians using off-the-shelf VFMs at both 2D image and 3D scene levels. 
+            A highly efficient, CUDA-accelerated Gaussian-to-Voxel (G2V) splatting module is designed to enable high-dimensional VFM feature distillation and speed up training.
+          </p>
+          <p>
+            ShelfGaussian achieves state-of-the-art zero-shot performance on semantic occupancy prediction on nuScenes dataset, superior performance on Bird's-Eye-View (BEV) segmentation, and reduced collision rate in trajectory planning when integrated into our Gaussian-Planner.
+          </p>  
+          <p>
+            We further test ShelfGaussian on an unmanned ground vehicle (UGV) across diverse urban scenes, demonstrating its superior in-the-wild performance. 
+            All code and data will be open-sourced to benefit the community.
+          </div>
+      </div>
+    </div>
+    <img src="./static/images/method.jpg" alt="ShelfGaussian Method" style="width: 100%; height: auto;">
+  </div>
+</section>
+
+
+
+<!-- Labeling Engine section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">DINO-Driven Pseudo Labeling Engine</h2>
+        <div class="content has-text-justified">
+          <div class="image-container" style="position: relative; display: inline-block; width: 100%; margin-bottom: 30px;">
+            <p class="centered-text">
+              We teleoperate our UGV through urban scenarios to collect paired image and point cloud sequences along with trajectories from onboard camera and LiDAR. 
+              LiDAR points are then projected to image and decorated with pixel-wise DINO features. 
+              These points are aggregated and voxelized at a customized resolution to be 3D pseudo labels.
+            </p>
+            <img src="./static/images/pseudo_label_engine.png" alt="pseudo_label_engine" style="width: 100%; height: auto;">
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Voxelizer section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">CUDA-Accelerated Gaussian-to-Voxel Splatting</h2>
+        <div class="content has-text-justified">
+          <p>
+            Dual-CSR Structure for CUDA-Accelerated Gaussian2Voxel.
+            <b>Gaussian-to-Tile CSR:</b> index pointers store tile offsets per Gaussian, indices record tile IDs, and values store Gaussian IDs.
+            <b>Tile-to-Gaussian CSR:</b> index pointers store Gaussian offsets per tile, and indices record Gaussian IDs obtained by sorting and run-length encoding (RLE) tile-Gaussian pairs.
+          </p>
+          <img src="./static/images/cudagaussianvoxelizer.jpg" alt="cudagaussianvoxelizer" style="width: 100%; height: auto; margin-bottom: 30px;">
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- nuScenes section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Results on Occ3D-nuScenes Dataset.</h2>
+        <div class="content has-text-justified">
+          <!-- <p>
+            Text here.
+          </p> -->
+          <img src="./static/images/nuscenes_dataset.jpg" alt="nuscenes_dataset" style="width: 100%; height: auto; margin-bottom: 30px;">
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- custom dataset section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Results on Custom Dataset.</h2>
+        <div class="content has-text-justified">
+          <!-- <p>
+            Text here.
+          </p> -->
+          <img src="./static/images/custom_dataset.jpg" alt="custom_dataset" style="width: 100%; height: auto; margin-bottom: 30px;">
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{zhao2025shelfgaussian,
+  author    = {Zhao, Lingjun and Luo, Yandong and Hays, James and Gan Lu},
+  title     = {ShelfGaussian: Shelf-Supervised Open-Vocabulary Gaussian-based 3D Scene Understanding},
+  year      = {2025},
+  note      = {Preprint available soon on arXiv.}
+}</code></pre>
+  </div>
+</section>
+
+
+<!-- cite nerfies project page https://github.com/nerfies/nerfies.github.io -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page is modified based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
