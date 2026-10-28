@@ -24,4 +24,4 @@ voxelizer = PyCudaGaussianVoxelizer(voxel_size=[0.4, 0.4, 0.4],
 density, grid_feats, _ = voxelizer(means3d, opacities, covariances, features)
 ```
 
-In ShelfGaussian it is wrapped by `gausstr/models/cuda_gaussian_voxelizer.py`.
+In ShelfGaussian it is wrapped by `shelfgaussian/models/cuda_gaussian_voxelizer.py`.

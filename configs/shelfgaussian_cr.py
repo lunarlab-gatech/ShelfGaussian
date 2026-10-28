@@ -1,6 +1,6 @@
 _base_ = 'mmdet3d::_base_/default_runtime.py'
 
-custom_imports = dict(imports=['gausstr'])
+custom_imports = dict(imports=['shelfgaussian'])
 
 input_size = (378, 672)
 embed_dims = 256

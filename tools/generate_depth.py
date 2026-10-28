@@ -21,7 +21,7 @@ try:
 except ImportError:
     from torchvision import transforms as T
 
-from gausstr import *  # noqa: F401,F403
+from shelfgaussian import *  # noqa: F401,F403
 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
