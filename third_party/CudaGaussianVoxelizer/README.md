@@ -4,6 +4,9 @@ CUDA kernels used by ShelfGaussian to voxelize 3D Gaussians (density + feature s
 and to compute the voxel-level feature cosine loss, with forward and backward passes.
 Written by [Yandong Luo](https://github.com/Yandong-Luo).
 
+This is a copy bundled with ShelfGaussian. The maintained version is at
+[lunarlab-gatech/ShelfGaussian-CudaGaussianVoxelizer](https://github.com/lunarlab-gatech/ShelfGaussian-CudaGaussianVoxelizer).
+
 ## Install
 
 Requires a CUDA toolkit matching your PyTorch build.

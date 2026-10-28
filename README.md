@@ -16,6 +16,7 @@ Georgia Institute of Technology
 
 ## News
 
+* ***10/2026:*** Code is open-sourced. ShelfGaussian features a highly efficient CUDA-accelerated Gaussian voxelizer ([`third_party/CudaGaussianVoxelizer`](third_party/CudaGaussianVoxelizer); maintained at [ShelfGaussian-CudaGaussianVoxelizer](https://github.com/lunarlab-gatech/ShelfGaussian-CudaGaussianVoxelizer)), up to **221×** / **5×** faster and **4.6×** / **2.6×** more memory-efficient than the splatting in GaussTR / GaussianFormer.
 * ***03/2026:*** ShelfGaussian has been accepted to CVPR 2026 Findings. 🎉
 
 ## Overview
@@ -45,6 +46,7 @@ pip install https://github.com/nerfstudio-project/gsplat/releases/download/v1.4.
 # pip install https://github.com/nerfstudio-project/gsplat/releases/download/v1.4.0/gsplat-1.4.0%2Bpt21cu121-cp310-cp310-linux_x86_64.whl
 
 # 3. CUDA Gaussian voxelizer (requires a CUDA toolkit matching PyTorch)
+#    A copy is bundled here; it is maintained at https://github.com/lunarlab-gatech/ShelfGaussian-CudaGaussianVoxelizer
 pip install -e third_party/CudaGaussianVoxelizer --no-build-isolation
 ```
 
